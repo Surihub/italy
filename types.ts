@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface PhraseItem {
   it: string;
   kr: string;
@@ -9,7 +7,6 @@ export interface PhraseItem {
 export interface Category {
   id: string;
   title: string;
-  icon?: ReactNode; 
   color: string;
   items: PhraseItem[];
 }

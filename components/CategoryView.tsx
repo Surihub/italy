@@ -68,7 +68,7 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category, onBack }) => {
       const cleanTranscript = transcript.toLowerCase().replace(/[?!.,]/g, '').trim();
 
       // Check if the transcript contains the key phrase or vice versa
-      if (cleanTranscript.includes(cleanTarget) || cleanTarget.includes(cleanTranscript) || cleanTranscript.length > 2 && cleanTarget.includes(cleanTranscript)) {
+      if (cleanTranscript.includes(cleanTarget) || cleanTarget.includes(cleanTranscript) || (cleanTranscript.length > 2 && cleanTarget.includes(cleanTranscript))) {
         setSpeechFeedback({ status: 'success', message: `Bravo! You said: "${transcript}"` });
         speak("Bravo!");
       } else {
@@ -115,10 +115,10 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category, onBack }) => {
           {category.items.map((item, idx) => (
             <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm border border-stone-100 flex flex-col gap-3 transition-colors hover:border-indigo-100">
               <div className="flex justify-between items-start">
-                  <div className="flex-1 cursor-pointer" onClick={() => setExpandedPhrase(item)}>
+                  <div className="flex-1 cursor-pointer group" onClick={() => setExpandedPhrase(item)}>
                       <div className="flex items-start gap-2">
-                        <div className="text-2xl font-bold text-stone-800 mb-1 tracking-tight font-serif">{item.it}</div>
-                        <Maximize2 className="w-4 h-4 text-stone-300 mt-2 flex-shrink-0" />
+                        <div className="text-2xl font-bold text-stone-800 mb-1 tracking-tight font-serif group-hover:text-indigo-600 transition-colors">{item.it}</div>
+                        <Maximize2 className="w-4 h-4 text-stone-300 mt-2 flex-shrink-0 group-hover:text-indigo-300" />
                       </div>
                       <div className="text-stone-500 font-medium">{item.kr}</div>
                   </div>
@@ -153,7 +153,7 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category, onBack }) => {
 
       {/* Fullscreen Modal */}
       {expandedPhrase && (
-        <div className="fixed inset-0 z-50 bg-stone-900/95 flex flex-col items-center justify-center p-6 animate-fade-in">
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center p-6 animate-fade-in">
           <button 
             onClick={() => setExpandedPhrase(null)}
             className="absolute top-6 right-6 p-4 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors"
@@ -161,7 +161,7 @@ const CategoryView: React.FC<CategoryViewProps> = ({ category, onBack }) => {
             <X className="w-8 h-8" />
           </button>
           
-          <div className="w-full bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-2xl space-y-8">
+          <div className="w-full max-w-sm bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-2xl space-y-8 animate-slide-up">
             <h3 className="text-stone-400 font-bold uppercase tracking-wider text-sm">Mostrare a un italiano</h3>
             <div className="text-5xl md:text-6xl font-black text-stone-900 font-serif leading-tight break-words w-full">
               {expandedPhrase.it}

@@ -29,14 +29,15 @@ export const categories: Category[] = [
       { it: 'Un tavolo per due, per favore', kr: '두 명 자리 부탁해요', pron: '운 타볼로 페르 두에, 페르 파보레' },
       { it: 'Il menu, per favore', kr: '메뉴판 좀 주세요', pron: '일 메누, 페르 파보레' },
       { it: 'Vorrei questo', kr: '이거 주세요 (메뉴 가리키며)', pron: '보레이 퀘스토' },
-      { it: 'Acqua naturale / frizzante', kr: '물 (일반 / 탄산)', pron: '아꾸아 나투랄레 / 프리잔떼' },
+      { it: 'Acqua naturale', kr: '생수 (탄산 없는 물)', pron: '아꾸아 나투랄레' },
+      { it: 'Acqua frizzante', kr: '탄산수', pron: '아꾸아 프리잔떼' },
       { it: 'Un caffè, per favore', kr: '에스프레소 한 잔이요', pron: '운 카페, 페르 파보레' },
       { it: 'Dov\'è il bagno?', kr: '화장실이 어디죠?', pron: '도베 일 바뇨?' },
       { it: 'È delizioso!', kr: '정말 맛있어요!', pron: '에 델리찌오조!' },
       { it: 'Il conto, per favore', kr: '계산서 부탁해요', pron: '일 콘토, 페르 파보레' },
       { it: 'Posso pagare con la carta?', kr: '카드로 계산 되나요?', pron: '포쏘 파가레 콘 라 카르타?' },
       { it: 'Sono allergico a...', kr: '저는 ... 알러지가 있어요', pron: '쏘노 알레르지코 아...' },
-      { it: 'Ben cotto / Al sangue', kr: '웰던 / 레어 (굽기)', pron: '벤 코토 / 알 산구에' },
+      { it: 'Sono vegetariano/a', kr: '저는 채식주의자입니다', pron: '쏘노 베제타리아노/나' },
     ]
   },
   {
@@ -54,7 +55,7 @@ export const categories: Category[] = [
       { it: 'Lo prendo', kr: '이거 살게요', pron: '로 프렌도' },
       { it: 'Tax free?', kr: '택스 프리 되나요?', pron: '택스 프리?' },
       { it: 'A che ora chiudete?', kr: '몇 시에 닫나요?', pron: '아 케 오라 키우데테?' },
-      { it: 'Aperto / Chiuso', kr: '영업중 / 닫힘', pron: '아페르토 / 키우조' },
+      { it: 'Posso pagare in contanti?', kr: '현금으로 낼 수 있나요?', pron: '포쏘 파가레 인 콘탄티?' },
     ]
   },
   {

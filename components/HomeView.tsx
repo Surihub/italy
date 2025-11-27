@@ -20,11 +20,11 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onStartQuiz }) => {
   };
 
   return (
-    <div className="space-y-6 animate-fade-in pb-20">
+    <div className="space-y-6 animate-fade-in pb-24">
       <div className="text-center py-8 bg-white rounded-3xl shadow-sm border border-stone-100 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-white to-red-500 opacity-80"></div>
         <h2 className="text-3xl font-serif font-bold text-stone-800 tracking-tight">Buon Viaggio!</h2>
-        <p className="text-stone-500 mt-2 font-medium font-sans">For your perfect Italian Honeymoon</p>
+        <p className="text-stone-500 mt-2 font-medium font-sans">For your perfect Italian Trip</p>
       </div>
 
       <div className="grid grid-cols-2 gap-4">
@@ -53,8 +53,8 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onStartQuiz }) => {
               <Languages className="w-6 h-6" />
             </div>
             <div className="text-left">
-              <div className="font-bold text-lg">Translator</div>
-              <div className="text-stone-400 text-sm">Translate what you want to say</div>
+              <div className="font-bold text-lg">AI Translator</div>
+              <div className="text-stone-400 text-sm">Translate & Show to locals</div>
             </div>
           </div>
         </button>
@@ -70,7 +70,7 @@ const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onStartQuiz }) => {
               <Bot className="w-6 h-6 text-white" />
             </div>
             <div className="text-left">
-              <div className="font-bold text-lg">Amore AI Travel Guide</div>
+              <div className="font-bold text-lg">Amore AI Guide</div>
               <div className="text-indigo-100 text-sm">Ask anything about Italy!</div>
             </div>
           </div>

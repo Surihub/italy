@@ -105,7 +105,7 @@ const TranslatorView: React.FC<TranslatorViewProps> = ({ onBack }) => {
 
       {/* Fullscreen Modal */}
       {isFullScreen && result && (
-        <div className="fixed inset-0 z-50 bg-stone-900/95 flex flex-col items-center justify-center p-6 animate-fade-in">
+        <div className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex flex-col items-center justify-center p-6 animate-fade-in">
           <button 
             onClick={() => setIsFullScreen(false)}
             className="absolute top-6 right-6 p-4 bg-white/10 text-white rounded-full hover:bg-white/20 transition-colors"
@@ -113,7 +113,7 @@ const TranslatorView: React.FC<TranslatorViewProps> = ({ onBack }) => {
             <X className="w-8 h-8" />
           </button>
           
-          <div className="w-full bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-2xl space-y-8">
+          <div className="w-full max-w-sm bg-white rounded-3xl p-8 flex flex-col items-center text-center shadow-2xl space-y-8 animate-slide-up">
             <h3 className="text-stone-400 font-bold uppercase tracking-wider text-sm">Mostrare a un italiano</h3>
             <div className="text-5xl md:text-6xl font-black text-stone-900 font-serif leading-tight break-words w-full">
               {result.italian}
