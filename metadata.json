@@ -1,0 +1,7 @@
+{
+  "name": "Amore Travel - Italian Guide",
+  "description": "A honeymoon companion app for learning Italian phrases and getting AI-powered travel advice.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
